@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>UpperCase Converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>UpperCase Converter</h1>
+
+        <div class="input-group">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString" placeholder="Type something here..." autofocus />
+        </div>
+
+        <button class="btn" onclick="upperCase()">UpperCase</button>
+        <button class="btn" onclick="clearInput()">Clear</button>
+        <br>
+        <a href="./index.html"><button class="btn">Home</button></a>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function clearInput() {
+            const input = document.getElementById("inputString");
+            const resultElement = document.getElementById("result");
+
+            input.value = "";
+            resultElement.textContent = "";
+            resultElement.className = "result";
+        }
+
+        function upperCase() {
+            const inputString = document.getElementById("inputString").value.trim();
+            const resultElement = document.getElementById("result");
+
+            if (inputString === "") {
+                resultElement.textContent = "Please enter a string.";
+            } else {
+                resultElement.textContent = inputString.toUpperCase();
+            }
+
+            resultElement.className = "result show";
+        }
+    </script>
+</body>
+
+</html>
