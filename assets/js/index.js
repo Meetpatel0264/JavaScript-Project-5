@@ -9,7 +9,6 @@ function checkPalindrome() {
   let inputString = document.getElementById("inputString").value.toLowerCase().trim();
   let resultElement = document.getElementById("result");
 
-   classes
   resultElement.className = "result";
 
   
